@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (5.9.1)
+  - RxCocoa (6.7.1):
+    - RxRelay (= 6.7.1)
+    - RxSwift (= 6.7.1)
+  - RxRelay (6.7.1):
+    - RxSwift (= 6.7.1)
+  - RxSwift (6.7.1)
+  - SixNetwork (0.1.0):
+    - Alamofire
+    - RxSwift
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - RxCocoa
+  - SixNetwork (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+
+EXTERNAL SOURCES:
+  SixNetwork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  RxCocoa: f5609cb4637587a7faa99c5d5787e3ad582b75a4
+  RxRelay: 4151ba01152436b08271e08410135e099880eae5
+  RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
+  SixNetwork: 889aee1c5645368e4a7863a9636646676e58175a
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: bd9aeb18ba195570a0ee89b9ebac06b9d59b8ffe
+
+COCOAPODS: 1.15.2

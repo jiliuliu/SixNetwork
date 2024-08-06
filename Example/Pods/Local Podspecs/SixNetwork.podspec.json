@@ -1,0 +1,31 @@
+{
+  "name": "SixNetwork",
+  "version": "0.1.0",
+  "summary": "A short description of SixNetwork.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/liujiliu1989@163.com/SixNetwork",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liujiliu1989@163.com": "jiliu.liu@alpha-ess.com"
+  },
+  "source": {
+    "git": "https://github.com/liujiliu1989@163.com/SixNetwork.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "SixNetwork/Classes/**/*",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "frameworks": "Foundation",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "RxSwift": [
+
+    ]
+  }
+}

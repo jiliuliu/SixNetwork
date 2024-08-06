@@ -28,7 +28,6 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/liujiliu1989@163.com/SixNetwork.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SixNetwork/Classes/**/*'
   
@@ -36,7 +35,9 @@ TODO: Add long description of the pod here.
   #   'SixNetwork' => ['SixNetwork/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.platform = :ios, "13.0"
+  s.frameworks = 'Foundation'
+  s.dependency 'Alamofire'
+  s.dependency 'RxSwift'
+  
 end

@@ -1,0 +1,6 @@
+framework module SixNetwork {
+  umbrella header "SixNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}
