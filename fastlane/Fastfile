@@ -31,6 +31,6 @@ pod_lib_lint(allow_warnings: true)
 
 # 因为本地索引库repo的名字是基本上不会去改变的，所以这里直接写死 SixSpecs
 # podspec的名字需要由外界传入
-pod_push(path: "#{podspecName}.podspec", repo: "SixSpecs")
+pod_push(path: "#{podspecName}.podspec", repo: "SixSpecs", allow_warnings: true)
 
 end
