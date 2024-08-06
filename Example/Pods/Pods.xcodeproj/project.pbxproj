@@ -2512,39 +2512,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1DBB9639F6E19EBC4B75C3DA2AA67094 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 689417AB72800CA48441213F5DADA08A /* SixNetwork.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SixNetwork/SixNetwork-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SixNetwork/SixNetwork-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SixNetwork/SixNetwork.modulemap";
-				PRODUCT_MODULE_NAME = SixNetwork;
-				PRODUCT_NAME = SixNetwork;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		321A2120D400C5B8DC97CEE0924C9F21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4658CBC69D8FA8BC782F130AC40C99EC /* SnapKit.release.xcconfig */;
@@ -2759,38 +2726,6 @@
 			};
 			name = Debug;
 		};
-		6756CA3330B9740869F7D0C36752E486 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 786F1416C058AFA8DD50B4741ACD911F /* SixNetwork.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SixNetwork/SixNetwork-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SixNetwork/SixNetwork-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SixNetwork/SixNetwork.modulemap";
-				PRODUCT_MODULE_NAME = SixNetwork;
-				PRODUCT_NAME = SixNetwork;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2856,6 +2791,39 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		9DFA0B38BFF725D6EE36190DF6151A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 689417AB72800CA48441213F5DADA08A /* SixNetwork.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SixNetwork/SixNetwork-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SixNetwork/SixNetwork-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SixNetwork/SixNetwork.modulemap";
+				PRODUCT_MODULE_NAME = SixNetwork;
+				PRODUCT_NAME = SixNetwork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2950,6 +2918,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		BA2D95619F3A1DD8A98BD50AD797D1E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786F1416C058AFA8DD50B4741ACD911F /* SixNetwork.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SixNetwork/SixNetwork-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SixNetwork/SixNetwork-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SixNetwork/SixNetwork.modulemap";
+				PRODUCT_MODULE_NAME = SixNetwork;
+				PRODUCT_NAME = SixNetwork;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		BD264F768C333F8588DFA0E523440998 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3256,8 +3256,8 @@
 		CD7316A990FE4F4D2DBE73AB414DF842 /* Build configuration list for PBXNativeTarget "SixNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6756CA3330B9740869F7D0C36752E486 /* Debug */,
-				1DBB9639F6E19EBC4B75C3DA2AA67094 /* Release */,
+				BA2D95619F3A1DD8A98BD50AD797D1E9 /* Debug */,
+				9DFA0B38BFF725D6EE36190DF6151A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

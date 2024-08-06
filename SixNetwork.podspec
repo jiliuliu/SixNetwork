@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'SixNetwork'
-    s.version          = '0.1.0'
+    s.version          = '0.1.2'
     s.summary          = 'SixNetwork'
     s.description      = <<-DESC
     SixNetwork是网络库组件，用于发送http请求
@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
     s.source_files     = 'SixNetwork/Classes/**/*'
     
     s.platform = :ios, "13.0"
+    s.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5']
     s.frameworks = 'Foundation'
-    s.dependency 'Alamofire'
-    s.dependency 'RxSwift'
+    s.dependency 'Alamofire', '5.9.1'
+    s.dependency 'RxSwift', '6.7.1'
     
 end

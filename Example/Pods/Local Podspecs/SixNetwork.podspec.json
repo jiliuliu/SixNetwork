@@ -1,6 +1,6 @@
 {
   "name": "SixNetwork",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "SixNetwork",
   "description": "SixNetwork是网络库组件，用于发送http请求",
   "homepage": "https://github.com/jiliuliu/SixNetwork",
@@ -9,19 +9,28 @@
   },
   "source": {
     "git": "https://github.com/jiliuliu/SixNetwork.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "source_files": "SixNetwork/Classes/**/*",
   "platforms": {
     "ios": "13.0"
   },
+  "swift_versions": [
+    "5.0",
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+  ],
   "frameworks": "Foundation",
   "dependencies": {
     "Alamofire": [
-
+      "5.9.1"
     ],
     "RxSwift": [
-
+      "6.7.1"
     ]
-  }
+  },
+  "swift_version": "5.5"
 }
