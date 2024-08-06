@@ -1,36 +1,71 @@
-# macOS
-.DS_Store
-
 # Xcode
+.DS_Store
 build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
-*.xccheckout
-*.moved-aside
-DerivedData
+DerivedData/
+.idea/
 *.hmap
 *.ipa
+*.xcuserdatad
+*.xcscmblueprint
+*.xcscmblueprint/
 
-# Bundler
-.bundle
+# Swift Package Manager
+.swiftpm
+.build/
 
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# CocoaPods
+Pods/
+Podfile.lock
 
-Carthage/Build
+# Carthage
+Carthage/Build/
 
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-# 
-# Note: if you ignore the Pods directory, make sure to uncomment
-# `pod install` in .travis.yml
-#
-# Pods/
+# Accio dependency management
+Dependencies/
+.accio/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Archives
+*.xcarchive
+
+# AppCode
+.idea/
+*.iml
+*.ipr
+
+# Code Injection
+#.codeInjector/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Xcode environment overrides
+xcdebugger/
+*.xcoverride
+
+# SonarQube
+sonar-report.json
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# User-specific files
+*.moved-aside
+*.personal.xcodeproj
+*.personal.xcworkspace
+*.swiftdoc
+*.swiftsourceinfo
+*.xcodeproj/
+
+# Xcode warnings
+*.xcuserstate
+
+# Other
+*.orig

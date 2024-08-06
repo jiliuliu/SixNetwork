@@ -1,6 +1,6 @@
 {
   "name": "SixNetwork",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "SixNetwork",
   "description": "SixNetwork是网络库组件，用于发送http请求",
   "homepage": "https://github.com/jiliuliu/SixNetwork",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/jiliuliu/SixNetwork.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "source_files": "SixNetwork/Classes/**/*",
   "platforms": {
