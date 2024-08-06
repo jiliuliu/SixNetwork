@@ -1,43 +1,18 @@
-#
-# Be sure to run `pod lib lint SixNetwork.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'SixNetwork'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SixNetwork.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/liujiliu1989@163.com/SixNetwork'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'liujiliu1989@163.com' => 'jiliu.liu@alpha-ess.com' }
-  s.source           = { :git => 'https://github.com/liujiliu1989@163.com/SixNetwork.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-
-  s.source_files = 'SixNetwork/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SixNetwork' => ['SixNetwork/Assets/*.png']
-  # }
-
-  s.platform = :ios, "13.0"
-  s.frameworks = 'Foundation'
-  s.dependency 'Alamofire'
-  s.dependency 'RxSwift'
-  
+    s.name             = 'SixNetwork'
+    s.version          = '0.1.0'
+    s.summary          = 'SixNetwork'
+    s.description      = <<-DESC
+    SixNetwork是网络库组件，用于发送http请求
+    DESC
+    s.homepage         = 'https://github.com/jiliuliu/SixNetwork'
+    s.author           = { "six" => "liujiliu1989@163.com" }
+    s.source           = { :git => 'https://github.com/jiliuliu/SixNetwork.git', :tag => s.version.to_s }
+    s.source_files     = 'SixNetwork/Classes/**/*'
+    
+    s.platform = :ios, "13.0"
+    s.frameworks = 'Foundation'
+    s.dependency 'Alamofire'
+    s.dependency 'RxSwift'
+    
 end
