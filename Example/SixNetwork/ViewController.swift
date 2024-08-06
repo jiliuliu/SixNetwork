@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("获取国家列表", for: .normal)
+        button.setTitle("获取国家列表1", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         view.addSubview(button)
