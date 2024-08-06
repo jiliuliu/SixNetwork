@@ -22,8 +22,11 @@ pod 'SixNetwork'
 
 ## Author
 
-liujiliu1989@163.com, jiliu.liu@alpha-ess.com
+liujiliu1989@163.com
 
 ## License
 
 SixNetwork is available under the MIT license. See the LICENSE file for more info.
+
+## fastlane
+fastlane SpecTool tag:0.1.4 specName:SixNetwork
