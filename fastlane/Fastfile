@@ -21,6 +21,11 @@ git_commit(path: ".", message: "upgrade repo")
 push_to_git_remote
 
 # 4、打标签，并提交至远程
+# 先验证tag是否存在，如果存在则删除本地标签和远程标签
+if git_tag_exists(tag: tagNum)
+  UI.message("您输入的tag:#{tagNum}已存在，即将自动清除") 
+  rm_tag(tagNum: tagNum)
+end
 add_git_tag(
   tag: tagNum
 )
