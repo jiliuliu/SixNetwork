@@ -9,28 +9,28 @@ import Foundation
 import RxSwift
 import Alamofire
 
-public class AFClient: ApiClientProtocol {
+public class AFClient: ApiClient {
     
     public static let shared = AFClient()
     
-    private var sessionMap: [BussinseType: Session] = [:]
+    private var sessionMap: [MoudleType: Session] = [:]
     
     public var headers: [String: String] = [:]
     
     public var baseUrl: String = ""
     
-    private func session(_ bussinseType: BussinseType) -> Session {
-        if let se = sessionMap[bussinseType] {
+    private func session(_ moudleType: MoudleType) -> Session {
+        if let se = sessionMap[moudleType] {
             return se
         }
-        sessionMap[bussinseType] = Session()
-        return sessionMap[bussinseType]!
+        sessionMap[moudleType] = Session()
+        return sessionMap[moudleType]!
     }
     
     // 通用请求
     public func request<T: Codable>(_ query: Query) -> Observable<T> {
         observable { observer in
-            self.session(query.bussinseType).request(
+            self.session(query.moudleType).request(
                 self.combineUrl(query.path),
                 method: query.method,
                 parameters: query.parameters,
@@ -46,7 +46,7 @@ public class AFClient: ApiClientProtocol {
     // 上传文件
     public func upload<T: Codable>(_ query: Query, fileURL: URL, uploadProgress: @escaping ProgressHandler) -> Observable<T> {
         observable { observer in
-            self.session(query.bussinseType).upload(
+            self.session(query.moudleType).upload(
                 fileURL,
                 to: self.combineUrl(query.path),
                 method: query.method,
@@ -65,7 +65,7 @@ public class AFClient: ApiClientProtocol {
             let destination: DownloadRequest.Destination = { _, _ in
                 return (destinationURL, [.removePreviousFile, .createIntermediateDirectories])
             }
-            return self.session(query.bussinseType).download(
+            return self.session(query.moudleType).download(
                 self.combineUrl(query.path),
                 method: query.method,
                 parameters: query.parameters,

@@ -10,12 +10,16 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import SixNetwork
+import SixBase
+import SixNetwork
 
 class ViewController: UIViewController {
     
+    let disposeBag = DisposeBag()
+    
     lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("获取国家列表1", for: .normal)
+        button.setTitle("获取国家列表", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         view.addSubview(button)
@@ -42,20 +46,32 @@ class ViewController: UIViewController {
         return textView
     }()
     
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(bundle: AFClient.self, name: "launcher")
+        return imageView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+
+        AFClient.shared.baseUrl = "http://www.carbon2030.com:9111/api/lite/mobile"
+        AFClient.shared.headers = [:]
         
-        AFClient.shared.baseUrl = AppEnv.shared.env.baseUrl
-        AFClient.shared.headers = headers
-        
-        let _ = button.rx.tap.subscribe { _ in
-            let _ = self.getCountryList().subscribe { value in
-                self.textView.text = value.description
-            } onError: { error in
-                print(error)
-            }
-        }
+        button.rx.tap
+            .flatMap(getCountryList)
+            .map({$0.description})
+            .bind(to: textView.rx.text)
+            .disposed(by: disposeBag)
+                
+//        button.rx.tap.subscribe { _ in
+//            let _ = self.getCountryList().subscribe { value in
+//                self.textView.text = value.description
+//            } onError: { error in
+//                print(error)
+//            }
+//        }.disposed(by: disposeBag)
         
     }
     
@@ -66,8 +82,6 @@ class ViewController: UIViewController {
     func launchCheck()-> Observable<CountryModel> {
         Query("/app/launch/check").post()
     }
-    
-    
 }
 
 

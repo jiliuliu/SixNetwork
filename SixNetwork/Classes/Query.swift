@@ -13,8 +13,11 @@ public enum ClientType {
     case alamofire, urlSession
 }
 
-public enum BussinseType {
-    case `default`
+public enum MoudleType {
+    case common
+    case home
+    case mine
+    case login
 }
 
 public typealias ProgressHandler = (Progress) -> Void
@@ -28,9 +31,9 @@ public class Query {
     public var responseParser: ResponseParser = WTResponseParser()
     
     public var clientType = ClientType.alamofire
-    public var bussinseType = BussinseType.default
+    public var moudleType = MoudleType.common
     
-    public var client: ApiClientProtocol {
+    public var client: ApiClient {
         get {
             switch clientType {
             case .alamofire:
@@ -42,20 +45,28 @@ public class Query {
     }
     
     public init(_ path: String,
-         method: HTTPMethod = .get,
          parameters: [String : Any]? = nil,
          headers: [String : String]? = nil,
          paramEncoding: ParameterEncoding = URLEncoding.default,
          clientType: ClientType = ClientType.alamofire,
-         bussinseType: BussinseType = BussinseType.default) {
+         moudleType: MoudleType = MoudleType.common) {
         self.path = path
         self.parameters = parameters
         self.headers = headers
         self.paramEncoding = paramEncoding
         self.clientType = clientType
-        self.bussinseType = bussinseType
+        self.moudleType = moudleType
     }
     
+    public class func home(_ path: String,
+                      parameters: [String : Any]? = nil,
+                      headers: [String : String]? = nil) -> Query {
+        Query(path, parameters: parameters, headers: headers, moudleType: .home)
+    }
+}
+
+
+extension Query {
     public func get<T: Codable>() -> Observable<T> {
         request(.get)
     }
@@ -88,7 +99,6 @@ public class Query {
     public func download(destinationURL: URL, downloadProgress: @escaping ProgressHandler = {_ in }) -> Observable<URL> {
         client.download(self, destinationURL: destinationURL, downloadProgress: downloadProgress)
     }
-
 }
 
 

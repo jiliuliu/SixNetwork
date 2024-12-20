@@ -12,6 +12,11 @@
     "tag": "0.1.2"
   },
   "source_files": "SixNetwork/Classes/**/*",
+  "resource_bundles": {
+    "Resources": [
+      "SixNetwork/Assets/**/*.xcassets"
+    ]
+  },
   "platforms": {
     "ios": "13.0"
   },

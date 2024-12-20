@@ -6,6 +6,13 @@ PODS:
   - RxRelay (6.7.1):
     - RxSwift (= 6.7.1)
   - RxSwift (6.7.1)
+  - SixBase (0.1.2):
+    - SixBase/Extension (= 0.1.2)
+    - SixBase/Router (= 0.1.2)
+    - SixBase/Utils (= 0.1.2)
+  - SixBase/Extension (0.1.2)
+  - SixBase/Router (0.1.2)
+  - SixBase/Utils (0.1.2)
   - SixNetwork (0.1.2):
     - Alamofire (= 5.9.1)
     - RxSwift (= 6.7.1)
@@ -13,10 +20,13 @@ PODS:
 
 DEPENDENCIES:
   - RxCocoa
+  - SixBase (= 0.1.2)
   - SixNetwork (from `../`)
   - SnapKit
 
 SPEC REPOS:
+  https://github.com/jiliuliu/SixSpecs.git:
+    - SixBase
   trunk:
     - Alamofire
     - RxCocoa
@@ -33,9 +43,10 @@ SPEC CHECKSUMS:
   RxCocoa: f5609cb4637587a7faa99c5d5787e3ad582b75a4
   RxRelay: 4151ba01152436b08271e08410135e099880eae5
   RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
-  SixNetwork: df5caba4b671c646a28329d22a5a450552397194
+  SixBase: 4eade19b5b3ec080b8510d1952d3ef8f88f2c4f6
+  SixNetwork: 0b718161d0820135249ab80fa316255c1d1bc890
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: bd9aeb18ba195570a0ee89b9ebac06b9d59b8ffe
+PODFILE CHECKSUM: a3aa9bcbe9e48aac83a09df3b071d058dabe91f6
 
 COCOAPODS: 1.15.2

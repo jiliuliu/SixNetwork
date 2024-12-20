@@ -1,3 +1,5 @@
+source 'https://github.com/jiliuliu/SixSpecs.git'
+
 use_frameworks!
 
 platform :ios, '13.0'
@@ -6,6 +8,7 @@ target 'SixNetwork_Example' do
   pod 'SixNetwork', :path => '../'
   pod 'RxCocoa'
   pod 'SnapKit'
+  pod 'SixBase', '0.1.2'
   
   target 'SixNetwork_Tests' do
     inherit! :search_paths

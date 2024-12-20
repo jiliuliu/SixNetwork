@@ -9,16 +9,8 @@ import Foundation
 import RxSwift
 import Alamofire
 
-public protocol ResponseParser {
-            
-    func parse<T: Codable>(response: DataResponse<ResponseModel<T>, AFError>, query: Query, observer: AnyObserver<T>)
-
-    func toBusinessError<T: Codable>(_ model: ResponseModel<T>, query: Query) -> ApiError
+public struct WTResponseParser: ResponseParser {    
     
-    func modelType<T: Codable>(_ type: T.Type) -> ResponseModel<T>.Type
-}
-
-public struct WTResponseParser: ResponseParser {
     public func parse<T: Codable>(response: Alamofire.DataResponse<ResponseModel<T>, Alamofire.AFError>, query: Query, observer: RxSwift.AnyObserver<T>) {
         print(response.description)
         switch response.result {

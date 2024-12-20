@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import Alamofire
 
-public protocol ApiClientProtocol {
+public protocol ApiClient {
     var headers: [String: String] { get }
     
     var baseUrl: String { set get }
